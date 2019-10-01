@@ -1,2 +1,6 @@
 HELP.md
 /target/
+!.mvn/wrapper/maven-wrapper.jar
+.classpath
+.project
+.settings
