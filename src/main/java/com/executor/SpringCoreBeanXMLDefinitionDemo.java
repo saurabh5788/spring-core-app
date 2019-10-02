@@ -9,10 +9,7 @@ public class SpringCoreBeanXMLDefinitionDemo {
 	public static void main(String[] args) {
 		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreBeanXMLDefinitionDemo_Beans_1.xml");
 		System.out.println("Application context loaded!!!");
-		process(applicationContext);
-	}
-	
-	public static void process(AbstractApplicationContext applicationContext){
+		
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();
 		for(String beanName : allBeanNames){
 			System.out.println("-"+beanName);

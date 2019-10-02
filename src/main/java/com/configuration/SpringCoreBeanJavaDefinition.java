@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Scope;
 import com.beans.AMDMicroprocessor;
 import com.beans.Microprocessor;
 
-@Configuration()
+@Configuration
 @Lazy(true)
-@Description("Java Based Bean Configuration class")
+@Description("Java Based Bean Configurations class")
 public class SpringCoreBeanJavaDefinition {
 	@Bean
 	@Description("Bean configuration with minimal configuration only with class.")
