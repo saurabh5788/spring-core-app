@@ -7,7 +7,7 @@ import com.beans.Microprocessor;
 
 public class SpringCoreBeanXMLDefinitionDemo {
 	public static void main(String[] args) {
-		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans_3.xml");
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreBeanXMLDefinitionDemo_Beans_1.xml");
 		System.out.println("Application context loaded!!!");
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();
 		for(String beanName : allBeanNames){

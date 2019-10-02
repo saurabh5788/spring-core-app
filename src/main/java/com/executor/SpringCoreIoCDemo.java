@@ -16,7 +16,7 @@ public class SpringCoreIoCDemo {
 	public static void main(String[] args) {
 		Microprocessor microprocessor = null;
 		//BeanFactory
-		Resource resource = new ClassPathResource("beans_1.xml");
+		Resource resource = new ClassPathResource("SpringCoreIoCDemo_Beans_1.xml");
 		//Resource resource = new FileSystemResource("C:\\...\\beans_1.xml");
 		BeanFactory beanFactory = new XmlBeanFactory(resource);
 		/*InputStream is = new FileInputStream("beans.xml");
@@ -27,13 +27,13 @@ public class SpringCoreIoCDemo {
 		// DefaultListableBeanFactory
 		DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(defaultListableBeanFactory);
-		reader.loadBeanDefinitions(new ClassPathResource("beans_1.xml"));
+		reader.loadBeanDefinitions(new ClassPathResource("SpringCoreIoCDemo_Beans_1.xml"));
 		microprocessor = defaultListableBeanFactory.getBean(Microprocessor.class);
 		System.out.println(microprocessor.toString());
 		
 		//Application Context
 		Computer computer = null;
-		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans_1.xml","beans_2.xml");
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreIoCDemo_Beans_1.xml","SpringCoreIoCDemo_Beans_2.xml");
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();
 		for(String beanName : allBeanNames){
 			System.out.println("-"+beanName);
