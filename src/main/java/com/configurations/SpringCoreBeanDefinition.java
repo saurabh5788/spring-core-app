@@ -13,7 +13,7 @@ import com.beans.Microprocessor;
 @Configuration
 @Lazy(true)
 @Description("Java Based Bean Configurations class")
-public class SpringCoreBeanJavaDefinition {
+public class SpringCoreBeanDefinition {
 	@Bean
 	@Description("Bean configuration with minimal configuration only with class.")
 	public Microprocessor getAMDMicroprocessor(){
