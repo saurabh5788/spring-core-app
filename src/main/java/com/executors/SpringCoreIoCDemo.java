@@ -1,5 +1,4 @@
 package com.executors;
-
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -8,10 +7,8 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-
 import com.beans.Computer;
 import com.beans.Microprocessor;
-
 public class SpringCoreIoCDemo {
 	public static void main(String[] args) {
 		Microprocessor microprocessor = null;
@@ -23,14 +20,12 @@ public class SpringCoreIoCDemo {
 		BeanFactory beanFactory = new XmlBeanFactory(is);*/		
 		microprocessor = beanFactory.getBean(Microprocessor.class);
 		System.out.println(microprocessor.toString());
-
 		// DefaultListableBeanFactory
 		DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(defaultListableBeanFactory);
 		reader.loadBeanDefinitions(new ClassPathResource("SpringCoreIoC_1.xml"));
 		microprocessor = defaultListableBeanFactory.getBean(Microprocessor.class);
-		System.out.println(microprocessor.toString());
-		
+		System.out.println(microprocessor.toString());		
 		//Application Context
 		Computer computer = null;
 		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreIoC_1.xml","SpringCoreIoC_2.xml");
