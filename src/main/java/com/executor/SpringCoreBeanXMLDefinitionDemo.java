@@ -9,14 +9,18 @@ public class SpringCoreBeanXMLDefinitionDemo {
 	public static void main(String[] args) {
 		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreBeanXMLDefinitionDemo_Beans_1.xml");
 		System.out.println("Application context loaded!!!");
+		process(applicationContext);
+	}
+	
+	public static void process(AbstractApplicationContext applicationContext){
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();
 		for(String beanName : allBeanNames){
 			System.out.println("-"+beanName);
 		}
-		Microprocessor singletonmicroprocessor = (Microprocessor) applicationContext.getBean("singletonmicroprocessor", Microprocessor.class);
-		System.out.println(singletonmicroprocessor.toString());
-		String [] singletonmicroprocessorAliases = applicationContext.getAliases("singletonmicroprocessor");
-		for(String aliasName : singletonmicroprocessorAliases){
+		Microprocessor singletoneagermicroprocessor = (Microprocessor) applicationContext.getBean("singletoneagermicroprocessor", Microprocessor.class);
+		System.out.println(singletoneagermicroprocessor.toString());
+		String [] singletoneagermicroprocessorAliases = applicationContext.getAliases("singletoneagermicroprocessor");
+		for(String aliasName : singletoneagermicroprocessorAliases){
 			System.out.println("-"+aliasName);
 		}
 		
