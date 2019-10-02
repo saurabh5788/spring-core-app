@@ -1,4 +1,4 @@
-package com.executor;
+package com.executors;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;

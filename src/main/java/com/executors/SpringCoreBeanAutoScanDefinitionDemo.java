@@ -1,13 +1,13 @@
-package com.executor;
+package com.executors;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import com.configuration.SpringCoreBeanJavaDefinition;
+import com.configurations.SpringCoreBeanAutoScanDefinition;
 
-public class SpringCoreBeanJavaDefinitionDemo {
+public class SpringCoreBeanAutoScanDefinitionDemo {
 	public static void main(String[] args) {
-		AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringCoreBeanJavaDefinition.class);
+		AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringCoreBeanAutoScanDefinition.class);
 		System.out.println("Application context loaded!!!");
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();
 		for(String beanName : allBeanNames){

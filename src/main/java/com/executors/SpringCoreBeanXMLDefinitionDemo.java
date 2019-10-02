@@ -1,4 +1,4 @@
-package com.executor;
+package com.executors;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
