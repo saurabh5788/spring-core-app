@@ -5,9 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.beans.Computer;
 
-public class SpringCoreConstructorInjectionXMLConfigurationDemo {
+public class SpringCoreSetterInjectionXMLConfigurationDemo {
 	public static void main(String[] args) {
-		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreConstructorInjectionConfiguration.xml");
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreSetterInjectionConfiguration.xml");
 		System.out.println("Application context loaded!!!");
 		
 		Computer computer = applicationContext.getBean(Computer.class);

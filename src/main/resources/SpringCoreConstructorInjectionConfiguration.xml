@@ -9,8 +9,8 @@
 
 	</bean>
 	<bean name="microprocessor" class="com.beans.MotorolaMicroprocessor">
-		<constructor-arg name="m" value="2" />
-		<constructor-arg name="n" value="1024" />
+		<constructor-arg name="n" value="2" />
+		<constructor-arg name="m" value="1024" />
 		<!-- <constructor-arg> <value>2</value> </constructor-arg> -->
 	</bean>
 </beans>
