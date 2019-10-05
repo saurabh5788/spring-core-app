@@ -5,9 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.beans.Microprocessor;
 
-public class SpringCoreBeanXMLDefinitionDemo {
+public class SpringCoreSimpleBeanXMLConfigurationDemo {
 	public static void main(String[] args) {
-		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreBeanDefinition_1.xml");
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("SpringCoreSimpleBeanConfiguration.xml");
 		System.out.println("Application context loaded!!!");
 		
 		String[] allBeanNames = applicationContext.getBeanDefinitionNames();

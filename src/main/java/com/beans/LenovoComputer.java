@@ -4,6 +4,7 @@ public class LenovoComputer implements Computer{
 	private Microprocessor microprocessor;
 
 	public LenovoComputer(Microprocessor microprocessor) {
+		System.out.println(getClass().getName()+" : 1 Arg Constructor Called!!!");
 		this.microprocessor = microprocessor;
 	}
 
