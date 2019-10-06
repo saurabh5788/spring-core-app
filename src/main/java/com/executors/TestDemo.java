@@ -9,7 +9,7 @@ import com.configurations.TestConfiguration;
 public class TestDemo {
 	public static void main(String[] args) {
 		AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(TestConfiguration.class);
-		Computer c = (Computer) applicationContext.getBean("getComputer");
+		Computer c = (Computer) applicationContext.getBean("&testComputer");
 		System.out.println(c.toString());
 		applicationContext.close();
 	}
